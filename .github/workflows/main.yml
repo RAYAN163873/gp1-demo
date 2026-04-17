@@ -34,8 +34,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and Push
-        env:
-          DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
-          docker build -t $DOCKER_USER/gp1-demo:latest .
-          docker push $DOCKER_USER/gp1-demo:latest
+          docker build -t rayan163873/gp1-demo:latest .
+          docker push rayan163873/gp1-demo:latest
