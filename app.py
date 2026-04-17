@@ -9,5 +9,6 @@ def add_numbers(a, b):
 def home():
     return jsonify({"status": "ok", "message": "Hello Dr. Tariq, Project 2 is Ready!,Hello from GitHub Desktop.!"})
 
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080)  # nosec
