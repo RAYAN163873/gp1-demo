@@ -37,5 +37,6 @@ jobs:
 
       - name: Build and Push
         run: |
-          docker build -t rayan163873/gp1-demo:latest .
-          docker push rayan163873/gp1-demo:latest
+          # لاحظ استخدام المتغير هنا لضمان التطابق مع حسابك الذي سجلت الدخول به
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/gp1-demo:latest .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/gp1-demo:latest
